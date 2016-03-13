@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import ua.krasovskij.utils.EventUtil;
-import ua.krasovskij.repository.EventRepository;
+
 import ua.krasovskij.service.ComunicateEvents;
 
 @WebServlet(name = "AddEvent", urlPatterns = "/add")
@@ -29,7 +29,7 @@ public class AddEvent extends HttpServlet {
 		catch(NullPointerException e){
 			out.println("Error");		
 		}
-		System.out.println("+1 now have : " + EventRepository.getAll().size());
+		
 		
 
 	}
