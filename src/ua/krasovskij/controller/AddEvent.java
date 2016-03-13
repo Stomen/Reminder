@@ -30,6 +30,35 @@ public class AddEvent extends HttpServlet {
 			out.println("Error");		
 		}
 		
+		PrintWriter out = response.getWriter();
+		try{
+		out.println(ComunicateEvents.add(EventUtil.createEvent(request.getParameter(TITLE), request.getParameter(DATE), request.getParameter(TIME))));
+		}
+		catch(NullPointerException e){
+			out.println("Error");		
+		}
+		PrintWriter out = response.getWriter();
+		try{
+		out.println(ComunicateEvents.add(EventUtil.createEvent(request.getParameter(TITLE), request.getParameter(DATE), request.getParameter(TIME))));
+		}
+		catch(NullPointerException e){
+			out.println("Error");		
+		}
+		PrintWriter out = response.getWriter();
+		try{
+		out.println(ComunicateEvents.add(EventUtil.createEvent(request.getParameter(TITLE), request.getParameter(DATE), request.getParameter(TIME))));
+		}
+		catch(NullPointerException e){
+			out.println("Error");		
+		}
+		PrintWriter out = response.getWriter();
+		try{
+		out.println(ComunicateEvents.add(EventUtil.createEvent(request.getParameter(TITLE), request.getParameter(DATE), request.getParameter(TIME))));
+		}
+		catch(NullPointerException e){
+			out.println("Error");		
+		}
+		
 		
 
 	}
