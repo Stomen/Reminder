@@ -10,21 +10,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ua.krasovskij.model.Event;
-import ua.krasovskij.service.ComunicateEvents;
-import ua.krasovskij.utils.EventUtil;
+import ua.krasovskij.service.EventService;;
+
 
 @WebServlet(name = "SearchEventServlet", urlPatterns = "/search")
-public class SearchEvent extends HttpServlet {
+public class SearchEventServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private final String PARAM = "param" ;
+	private static final String CONTENT_TYPE = "text/html";
 	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	
+		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
-		for(Event event : ComunicateEvents.search(request.getParameter(PARAM))){
-			out.write(EventUtil.printEvent(event));
+		for(Event event : EventService.search(request.getParameter(PARAM))){
+			out.write(event.toString());
 		}
 		
 

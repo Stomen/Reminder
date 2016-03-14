@@ -13,30 +13,23 @@ public class EventRepository {
 	}
 
 	public static boolean add(Event event) {
-		int firstState = eventList.size() ;
-		int secondState;
-		eventList.add(event);
-		secondState = eventList.size() ;
-			if(firstState == secondState){
-				return false;
-			}
-			else 
-				return true;
+		if(event == null){
+			return false;
+		}
+		else
+			return eventList.add(event);
 			
 	}
 
 	public static boolean remove(int id) {
 		
-		int firstState = eventList.size() ;
-		int secondState;
-		eventList.remove(id);
-		secondState = eventList.size() ;
-			if(firstState == secondState){
-				return false;
-			}
-			else{ 
+		for(Event event : eventList){
+			if(event.getId() == id){
+				eventList.remove(event);
 				return true;
 			}
+		}
+		return false;
+		
 	}
-
 }

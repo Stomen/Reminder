@@ -8,33 +8,31 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import ua.krasovskij.utils.EventUtil;
 
-import ua.krasovskij.service.ComunicateEvents;
+import ua.krasovskij.model.Event;
 
-@WebServlet(name = "AddEvent", urlPatterns = "/add")
-public class AddEvent extends HttpServlet {
+import ua.krasovskij.service.EventService;
+
+
+
+@WebServlet(name = "DisplayEvent", urlPatterns = "/display")
+public class DisplayEventServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private final String TITLE = "title" ;
-	private final String DATE = "day";
-	private final String TIME = "time";
+	private static final String CONTENT_TYPE = "text/html";
+	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-				
+
+		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
-		try{
-		out.println(ComunicateEvents.add(EventUtil.createEvent(request.getParameter(TITLE), request.getParameter(DATE), request.getParameter(TIME))));
+		for(Event event : EventService.display()){
+			
+			out.write(event.toString());
+			
 		}
-		catch(NullPointerException e){
-			out.println("Error");		
-		}
-		
-		
-		
 		
 
 	}
 
-	
 }

@@ -44,6 +44,10 @@ public class Event {
 	public int getId() {
 		return id;
 	}
+	
+	public String toString(){
+		return "<h3> Title : " + this.getTitle() + " Date : " + this.getDate() + " Time : " + this.getTime() + "</h3><br>";
+	}
 
 		
 

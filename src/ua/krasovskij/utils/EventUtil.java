@@ -18,8 +18,6 @@ public class EventUtil {
 
 	}
 	
-	public static String printEvent(Event event){
-		return "<h3> Title : " + event.getTitle() + " Date : " + event.getDate() + " Time : " + event.getTime() + "</h3><br>";
-		}
+	
 
 }

@@ -9,20 +9,29 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ua.krasovskij.service.ComunicateEvents;
+
+import ua.krasovskij.service.EventService;
 
 @WebServlet(name = "RemoveEventServlet", urlPatterns = "/remove")
-public class RemoveEvent extends HttpServlet {
+public class RemoveEventServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-	private String REMOVE_ID = "id";
+	private static final String CONTENT_TYPE = "text/html";
+	private static final String REMOVE_ID = "id";
+	private static final String ERROR_REMOVE = "ERROR!!! You have not event whith this id";
+	private static final String SUCCESS_REMOVE = "SUCCESS!!! You remove event";
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
-
-		out.print(ComunicateEvents.remove(Integer.parseInt(request.getParameter(REMOVE_ID))));
+		if(EventService.remove(Integer.parseInt(request.getParameter(REMOVE_ID)))){
+			out.print(SUCCESS_REMOVE);
+		}
+		else{
+			out.print(ERROR_REMOVE);
+		}
+		
 
 	}
 
