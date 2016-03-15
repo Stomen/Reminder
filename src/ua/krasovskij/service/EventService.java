@@ -1,6 +1,6 @@
 package ua.krasovskij.service;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import ua.krasovskij.model.Event;
@@ -35,14 +35,7 @@ public class EventService {
 	}
 
 	public static List<Event> search(String searchParam) {
-		List<Event> result = new ArrayList<Event>();
-		for (Event found : EventRepository.getAll()) {
-			if (found.getTitle().equalsIgnoreCase(searchParam) || found.getDate().equalsIgnoreCase(searchParam)
-					|| found.getTime().equalsIgnoreCase(searchParam)) {
-				result.add(found);
-			}
-		}
-		return result;
+		return EventRepository.search(searchParam);
 
 	}
 

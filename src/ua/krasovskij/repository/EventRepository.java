@@ -32,4 +32,16 @@ public class EventRepository {
 		return false;
 		
 	}
+	public static List<Event> search(String searchParam){
+		List<Event> result = new ArrayList<Event>();
+		for (Event found : EventRepository.getAll()) {
+			if (found.getTitle().equalsIgnoreCase(searchParam) || found.getDate().equalsIgnoreCase(searchParam)
+					|| found.getTime().equalsIgnoreCase(searchParam)) {
+				result.add(found);
+			}
+		}
+		return result;
+
+	}
+	
 }

@@ -27,9 +27,7 @@ public class DisplayEventServlet extends HttpServlet {
 		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
 		for(Event event : EventService.display()){
-			
-			out.write(event.toString());
-			
+				out.write(event.toString());
 		}
 		
 
