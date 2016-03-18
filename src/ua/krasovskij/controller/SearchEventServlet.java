@@ -2,6 +2,7 @@ package ua.krasovskij.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -18,14 +19,19 @@ public class SearchEventServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private final String PARAM = "param" ;
 	private static final String CONTENT_TYPE = "text/html";
+	private static final String ERROR = "ERROR!!! You have empty event";
 	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
-		for(Event event : EventService.search(request.getParameter(PARAM))){
-			out.write(event.toString());
+		List <Event> event = EventService.search(request.getParameter(PARAM));
+		if(event.isEmpty()||event==null){
+			out.print(ERROR);
+		}
+		for(Event searchEvent : event){
+			out.write(searchEvent.toString());
 		}
 		
 

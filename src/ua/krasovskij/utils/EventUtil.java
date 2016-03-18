@@ -8,8 +8,7 @@ public class EventUtil {
 		if (checkParam(title, date, time)) {
 			return new Event(title, date, time);
 		}
-
-		return null;
+		throw new IllegalArgumentException("Bad parameters");
 
 	}
 

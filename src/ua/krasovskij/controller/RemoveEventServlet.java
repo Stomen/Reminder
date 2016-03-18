@@ -19,20 +19,24 @@ public class RemoveEventServlet extends HttpServlet {
 	private static final String REMOVE_ID = "id";
 	private static final String ERROR_REMOVE = "ERROR!!! You have not event whith this id";
 	private static final String SUCCESS_REMOVE = "SUCCESS!!! You remove event";
+	private static final String ERROR = "ERROR!!! You have empty id";
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
 		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
-		if(EventService.remove(Integer.parseInt(request.getParameter(REMOVE_ID)))){
-			out.print(SUCCESS_REMOVE);
+		Integer id = Integer.parseInt(request.getParameter(REMOVE_ID));
+		if(id!=null){
+			if(EventService.remove(id)){
+				out.print(SUCCESS_REMOVE);
+			}
+			else{
+				out.print(ERROR_REMOVE);
+			}
 		}
-		else{
-			out.print(ERROR_REMOVE);
-		}
+		out.print(ERROR);
 		
-
 	}
 
 }
