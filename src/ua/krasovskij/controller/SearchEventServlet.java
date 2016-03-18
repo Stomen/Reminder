@@ -19,7 +19,7 @@ public class SearchEventServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private final String PARAM = "param" ;
 	private static final String CONTENT_TYPE = "text/html";
-	private static final String ERROR = "ERROR!!! You have empty event";
+	private static final String ERROR = "ERROR!!! You have empty event or bad param";
 	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -27,7 +27,7 @@ public class SearchEventServlet extends HttpServlet {
 		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
 		List <Event> event = EventService.search(request.getParameter(PARAM));
-		if(event.isEmpty()||event==null){
+		if(request.getParameter(PARAM).isEmpty() || event==null){
 			out.print(ERROR);
 		}
 		for(Event searchEvent : event){

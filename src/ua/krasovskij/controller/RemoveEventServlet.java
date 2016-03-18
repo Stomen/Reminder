@@ -26,9 +26,9 @@ public class RemoveEventServlet extends HttpServlet {
 
 		response.setContentType(CONTENT_TYPE);
 		PrintWriter out = response.getWriter();
-		Integer id = Integer.parseInt(request.getParameter(REMOVE_ID));
-		if(id!=null){
-			if(EventService.remove(id)){
+		String id = request.getParameter(REMOVE_ID);
+		if(id!=null && !id.isEmpty()){
+			if(EventService.remove(Integer.parseInt(id))){
 				out.print(SUCCESS_REMOVE);
 			}
 			else{
