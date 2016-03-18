@@ -12,19 +12,12 @@ public class EventService {
 	
 	
 	public static boolean add(Event event) {
-		if (EventRepository.add(event)) {
-			return true;
-		} else {
-			return false;
-		}
-
+		return EventRepository.add(event);
+			
 	}
 
 	public static boolean remove(int removeId) {
-		if(EventRepository.remove(removeId)){
-			return true;
-		}
-		return false;
+		return EventRepository.remove(removeId);
 	 }
 
 		
