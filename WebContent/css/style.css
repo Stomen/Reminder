@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+a:hover {
+   color:#f00;
+   -webkit-transition:color 500ms ease-in;
+   -moz-transition:color 500ms ease-in;
+   -o-transition:color 500ms ease-in;
+   transition:color 500ms ease-in;
+}
+.major{
+	
+}
+
+.header{
+	position: absolute;
+	top:5px;
+	background-color: black;
+	padding: 10px;
+	margin: 5px;
+}
+
+.center{
+	position: absolute;
+	background-color: green;
+}
+
+.rigth{
+	
+	
+	background-color: blue;
+}
+
+.footer{
+	
+	background-color: black;
+	
+}

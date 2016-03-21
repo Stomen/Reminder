@@ -52,7 +52,7 @@ public class AddEventServlet extends HttpServlet {
 		catch(Exception e){
 			out.print(ERROR_ADD + e.getMessage());
 		}
-		
+		request.getRequestDispatcher("add.html").forward(request, response);
 		
 		
 		

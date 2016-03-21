@@ -3,10 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<a href = "/index.html">Home</a>
-<a href = "/add.html">Add</a>
-<a href = "/dashboard.html">Dashboard</a>
+
+	<div class="links">
+		<a href = "index.html">Home</a>
+		<a href = "add.html">Add</a>
+		<a href = "dashboard.html">Dashboard</a>
+	</div>
+
+
+	<div class="add-part">
+		<h2>Add Event</h2>
+		<form action="dispaly" method="get">
+			<p>Title : 
+			<input type="text" name="title"></p><br>
+			<p>Description : 
+			<input type="text" name="title" id="add-title"></p><br>
+			<lable for="add-date">Title</lable>
+			<input type="text" name="date" id="add-date"><br>
+			<lable for="add-time">Title</lable>
+			<input type="text" name="time" id="add-time"><br>
+			<input type="submit" value="ADD">
+		</form>
+	</div>
+
 </body>
-</html>	
+</html>
