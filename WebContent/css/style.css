@@ -1,37 +1,36 @@
 @CHARSET "UTF-8";
-
-a:hover {
-   color:#f00;
-   -webkit-transition:color 500ms ease-in;
-   -moz-transition:color 500ms ease-in;
-   -o-transition:color 500ms ease-in;
-   transition:color 500ms ease-in;
+body{
+	background: url("img/reminder-791271.jpg");
+	 background-size: 100%;
 }
-.major{
-	
-}
+	 
 
 .header{
-	position: absolute;
-	top:5px;
-	background-color: black;
+	position: relative;
 	padding: 10px;
-	margin: 5px;
+	padding-left: 25px; 
+	margin: 10px;
+	border-radius: 5px;
 }
-
 .center{
-	position: absolute;
-	background-color: green;
-}
-
-.rigth{
-	
-	
-	background-color: blue;
+	position: relative;
+	margin-left:10px;
+	margin-right:10px;
+	padding:25px;
+	height: 450px;
+	border-radius: 5px;
 }
 
 .footer{
+	position: relative;
+	margin: 10px;
+	padding: 5px;
+	border-radius: 5px;
 	
-	background-color: black;
 	
 }
+form{
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
