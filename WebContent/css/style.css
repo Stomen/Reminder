@@ -26,15 +26,23 @@ A{
 }
 .center{
 	position: relative;
-	margin-left:10px;
-	margin-right:10px;
+	margin-left:20%;
 	padding:25px;
 	height: 450px;
-	border-radius: 5px;
+	width: 800px;
 	
 }
-.input-search{
+.add-form{
+	position: relative;
+	margin-left:35%;
+	padding:25px;
+	height: 450px;
 	width: 400px;
+	border: 1px solid black ;
+	border-radius: 5px;
+}
+.input-search{
+	width: 700px;
 	}
 .footer{
 	position: relative;
@@ -56,7 +64,7 @@ table{
 }
 .display-table td{
 	border: 1px solid black;
-	width:100px;
+	width:200px;
 	text-align:  center;
 }
 h2{
@@ -66,4 +74,16 @@ h2{
 }
 .save-button{
 	width: 180px;
+}
+p{
+	margin: 10px;	
+}
+img{
+	
+	float: right;
+	width: 400px;
+	height: 300px;
+	border-radius: 7px;
+	box-shadow: 5px 5px;
+	
 }
