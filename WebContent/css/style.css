@@ -1,10 +1,22 @@
 @CHARSET "UTF-8";
 body{
-	background: url("img/reminder-791271.jpg");
+	 background-image: url("../img/gradient-background.jpg");
 	 background-size: 100%;
 }
-	 
 
+A{
+	font-size: 20px;
+	margin: 10px;
+	color: white;
+	text-decoration: none;
+	
+   } 
+ 
+ A:hover {
+   
+   color: #f29b67 ;
+   
+   } 
 .header{
 	position: relative;
 	padding: 10px;
@@ -19,8 +31,11 @@ body{
 	padding:25px;
 	height: 450px;
 	border-radius: 5px;
+	
 }
-
+.input-search{
+	width: 400px;
+	}
 .footer{
 	position: relative;
 	margin: 10px;
@@ -29,8 +44,26 @@ body{
 	
 	
 }
-form{
-	border-radius: 5px;
-	border: 1px solid gray;
-}
 
+input{
+	margin: 10px;
+}
+textarea{
+	margin: 10px;
+}
+table{
+	border-collapse: collapse;
+}
+.display-table td{
+	border: 1px solid black;
+	width:100px;
+	text-align:  center;
+}
+h2{
+	color: white;
+	margin-left: 10px;
+	text-shadow: 1px 1px 2px black,
+}
+.save-button{
+	width: 180px;
+}
