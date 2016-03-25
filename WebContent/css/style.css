@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 body{
-	 background-image: url("../img/gradient-background.jpg");
-	 background-size: 100%;
+	 background-image: url("../img/background.jpg");
+
 }
 
 A{
@@ -27,16 +27,16 @@ A{
 .center{
 	position: relative;
 	margin-left:20%;
-	padding:25px;
-	height: 450px;
+	padding:5px;
+	height: 10000px;
 	width: 800px;
 	
 }
 .add-form{
 	position: relative;
 	margin-left:35%;
-	padding:25px;
-	height: 450px;
+	padding:5px;
+	height: 550px;
 	width: 400px;
 	border: 1px solid black ;
 	border-radius: 5px;

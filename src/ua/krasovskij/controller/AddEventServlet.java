@@ -26,7 +26,11 @@ public class AddEventServlet extends HttpServlet {
 	
 	
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		request.getRequestDispatcher("add.jsp").forward(request, response);
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
 		response.setContentType(CONTENT_TYPE);
@@ -34,34 +38,32 @@ public class AddEventServlet extends HttpServlet {
 		try{
 			Event util= EventUtil.createEvent(request.getParameter(TITLE), request.getParameter(DATE), request.getParameter(TIME));
 			if(util == null){
+				request.setAttribute("message", ERROR_ADD);
 				out.print(ERROR_ADD + EVENT_IS_EMPTY);
+				System.out.print("1");
 			}
 			else{
 				if(EventService.add(util)){
+					request.setAttribute("message", SUCCESS_ADD);
 					out.print(SUCCESS_ADD);
+					System.out.print("2");
 				}
 				else{
+					request.setAttribute("message", ERROR_ADD);
 					out.print(ERROR_ADD);
+					System.out.print("3");
 				}
 			}
-			
 		}
 		catch(IllegalArgumentException e){
+			request.setAttribute("message", ERROR_ADD);
 			out.print(ERROR_ADD + e.getMessage());
 		}
 		catch(Exception e){
+			request.setAttribute("message", ERROR_ADD);
 			out.print(ERROR_ADD + e.getMessage());
 		}
 		
-		
-		
-		
-		
-		
-		
-		
-
+		request.getRequestDispatcher("add.jsp").forward(request, response);
 	}
-
-	
 }
