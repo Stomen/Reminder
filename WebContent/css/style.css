@@ -1,7 +1,38 @@
 @CHARSET "UTF-8";
 body{
 	 background-image: url("../img/background.jpg");
+}
 
+.all{
+	width: 750px;
+	margin: 0 auto;	
+	height: 100%;
+	
+}
+
+header{
+	padding: 10px;
+	padding-left: 25px; 
+	margin: 10px;
+}
+
+aside{
+	float: left;
+	
+	width: 30%;
+	
+}
+
+.content{
+	float: left;
+	
+	width: 70%;
+	
+}
+
+footer{
+	clear: both;
+	
 }
 
 A{
@@ -9,14 +40,37 @@ A{
 	margin: 10px;
 	color: white;
 	text-decoration: none;
-	
-   } 
+} 
  
  A:hover {
-   
    color: #f29b67 ;
+} 
    
-   } 
+table{
+	border-collapse: collapse;
+	margin:50px;
+} 
+
+h2{
+	text-align: center;
+} 
+h3{
+	margin:50px;
+}
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
 .header{
 	position: relative;
 	padding: 10px;
