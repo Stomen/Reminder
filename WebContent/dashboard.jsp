@@ -7,23 +7,28 @@
 </head>
 <body>
 
-	<div class="header">
-		 <a href="home">Home</a>
-		 <a href="add">Add</a> 
-		 <a href="search">Dashboard</a>
-		 <hr>
-	</div>
 
+<div class="all">
 
-	<div class="center">
-	<form>
+			<header>
+					<a href="home">Home</a>
+					<a href="add">Add</a> 
+					<a href="search">Dashboard</a>
+					<hr>
+			</header>
+			<aside>
+				<h2 class="text">My right col</h2>
+			</aside>
+		
+			<div class="content">
+				<form>
 	<input class="input-search" type="text" name="search"><input type="submit" value="search"> <br>
 	</form>
 	
-		<table class="display-table">
+		<table class="table-style text">
 			<tr>
 				<td>
-				№
+				№
 				</td>
 				<td>
 				Title
@@ -39,14 +44,16 @@
 				</td>
 			</tr>
 		</table>
-
-	</div>
-
-
-
-	<div class="footer">
-		<p>Develop by Re</p>
-	</div>
-
+			</div>
+			
+		
+		
+			<footer>
+			<hr>
+				<p>Develop by Re</p>
+			</footer>
+			
+		</div>	
+	
 </body>
 </html>

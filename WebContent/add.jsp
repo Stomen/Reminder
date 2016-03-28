@@ -16,17 +16,17 @@
 					<hr>
 			</header>
 			<aside>
-				<h2>My right col</h2>
+				<h2 class="text">My right col</h2>
 			</aside>
 		
 			<div class="content">
 					
-					<h2>Enter your event</h2>
+					<h2 class="text">Enter your event</h2>
 							<h3><% Object message = request.getAttribute("message");%>
 							<%= message %>	</h3>
 					
 					<form action="add" method="post">
-						<table class="add-table">
+						<table class="table-style-add text">
 								<tr>
 									<td>Title:</td>
 									<td><input type="text" name="title"></td>
