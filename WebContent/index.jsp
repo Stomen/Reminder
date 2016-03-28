@@ -24,7 +24,7 @@
 				<p class="text">Make life easier<br>
 				<p class="text">Memory like a sieve? Now there is no need to remember all those things that you have to do,<br> because  
 					Reminder can do that for you! <br>It is quick and easy to use. You can set a task in the reminder list in mere seconds.
-				<img src="img/elephant-279901_640.jpg" > 1 </p>	
+				<img src="img/elephant-279901_640.jpg" ></p>	
 			</div>
 			
 		
