@@ -7,34 +7,34 @@
 </head>
 <body>
 
-<div class="all">
+	<div class="all">
 
-			<header>
+			<div class="header">
 					<a href="home">Home</a>
 					<a href="add">Add</a> 
 					<a href="search">Dashboard</a>
 					<hr>
-			</header>
-			<aside>
+			</div>
+			<div class = "aside">
 				<h2 class="text">My right col</h2>
-			</aside>
+			</div>
 		
 			<div class="content">
 				<h2 class="text">Reminder</h2>
 				<p class="text">Make life easier<br>
-				<p class="text">Memory like a sieve? Now there’s no need to remember all those things that you have to do,<br> because  
-					Reminder can do that for you! <br>It’s quick and easy to use; you can set a task in the reminder list in mere seconds.
+				<p class="text">Memory like a sieve? Now there is no need to remember all those things that you have to do,<br> because  
+					Reminder can do that for you! <br>It is quick and easy to use. You can set a task in the reminder list in mere seconds.
 				<img src="img/elephant-279901_640.jpg" ></p>	
 			</div>
 			
 		
 		
-			<footer>
-			<hr>
+			<div class="footer">
+				<hr>
 				<p class="text">Develop by Re</p>
-			</footer>
+			</div>
 			
-		</div>	
+	</div>	
 
 
 	

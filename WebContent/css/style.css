@@ -10,13 +10,13 @@ body{
 	
 }
 
-header{
+.header{
 	padding: 10px;
 	padding-left: 25px; 
 	margin: 10px;
 }
 
-aside{
+.aside{
 	float: left;
 	
 	width: 30%;
@@ -30,7 +30,7 @@ aside{
 	
 }
 
-footer{
+.footer{
 	clear: both;
 	height: 50px; 
  	
@@ -56,6 +56,7 @@ A{
 .table-style-add{
 	border-collapse: collapse;
 	margin:50px;
+	width:600px;
 } 
 
 h2{
@@ -95,18 +96,16 @@ img{
 	width: 600px;
 	}
 
-input{
+.input{
 	margin: 10px;
 }
 
-textarea{
+.textarea{
 	margin: 10px;
 }
 
 .save-button{
 	width: 180px;
 }
-p{
-	margin: 10px;	
-}
+
 

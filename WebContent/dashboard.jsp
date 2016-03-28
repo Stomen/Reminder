@@ -8,50 +8,51 @@
 <body>
 
 
-<div class="all">
+	<div class="all">
 
-			<header>
+			<div class="header">
 					<a href="home">Home</a>
 					<a href="add">Add</a> 
 					<a href="search">Dashboard</a>
 					<hr>
-			</header>
-			<aside>
+			</div>
+			
+			<div class = "aside">
 				<h2 class="text">My right col</h2>
-			</aside>
+			</div>
 		
 			<div class="content">
 				<form>
-	<input class="input-search" type="text" name="search"><input type="submit" value="search"> <br>
-	</form>
+					<input class="input-search" type="text" name="search"><input type="submit" value="search" class="input"> <br>
+				</form>
 	
-		<table class="table-style text">
-			<tr>
-				<td>
-				№
-				</td>
-				<td>
-				Title
-				</td>
-				<td>
-				Description
-				</td>
-				<td>
-				Date and Time
-				</td>
-				<td>
-				<button>Delete</button>
-				</td>
-			</tr>
-		</table>
+				<table class="table-style text">
+					<tr>
+						<td>
+							№
+						</td>
+						<td>
+							Title
+						</td>
+						<td>
+							Description
+						</td>
+						<td>
+							Date and Time
+						</td>
+						<td>
+							<button>Delete</button>
+						</td>
+					</tr>
+				</table>
 			</div>
 			
 		
 		
-			<footer>
-			<hr>
-				<p>Develop by Re</p>
-			</footer>
+			<div class="footer">
+				<hr>
+				<p class="text">Develop by Re</p>
+			</div>
 			
 		</div>	
 	

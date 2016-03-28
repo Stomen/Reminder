@@ -9,15 +9,15 @@
 
 		<div class="all">
 
-			<header>
+			<div class="header">
 					<a href="home">Home</a>
 					<a href="add">Add</a> 
 					<a href="search">Dashboard</a>
 					<hr>
-			</header>
-			<aside>
+			</div>
+			<div class = "aside">
 				<h2 class="text">My right col</h2>
-			</aside>
+			</div>
 		
 			<div class="content">
 					
@@ -29,11 +29,11 @@
 						<table class="table-style-add text">
 								<tr>
 									<td>Title:</td>
-									<td><input type="text" name="title"></td>
+									<td><input type="text" name="title" class="input"></td>
 								</tr>
 								<tr>
 									<td>Description:</td>
-									<td><textarea name="description" cols="22" rows="10"></textarea></td>
+									<td><textarea name="description" cols="22" rows="10" class="textarea"></textarea></td>
 								</tr>
 								<tr>
 									<td>Type:</td>
@@ -46,19 +46,19 @@
 								</tr>
 								<tr>
 									<td>Available:</td>
-									<td><input type="checkbox" name="available"></td>
+									<td><input type="checkbox" name="available" class="input"></td>
 								</tr>
 								<tr>
 									<td>Day:</td>
-									<td><input type="date" name="date"></td>
+									<td><input type="date" name="date" class="input"></td>
 								</tr>
 								<tr>
 									<td>Time:</td>
-									<td><input type="time" name="time"></td>
+									<td><input type="time" name="time" class="input"></td>
 								</tr>
 								<tr>
 									<td></td>
-									<td><input type="submit" value="SAVE" class="save-button" ></td>
+									<td><input type="submit" value="SAVE" class="save-button" class="input"></td>
 								</tr>
 			
 			
@@ -68,10 +68,10 @@
 			
 		
 		
-			<footer>
-			<hr		>
-				<p>Develop by Re</p>
-			</footer>
+			<div class="footer">
+			<hr>
+				<p class="text">Develop by Re</p>
+			</div>
 			
 		</div>	
 
