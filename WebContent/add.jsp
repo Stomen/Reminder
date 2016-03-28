@@ -22,8 +22,12 @@
 			<div class="content">
 					
 					<h2 class="text">Enter your event</h2>
-							<h3><% Object message = request.getAttribute("message");%>
-							<%= message %>	</h3>
+							<p><% Object message = request.getAttribute("message");%>
+							<% if(message==null)
+								{
+								message = "";
+								}%>
+							<%= message %>	</p>
 					
 					<form action="add" method="post">
 						<table class="table-style-add text">
