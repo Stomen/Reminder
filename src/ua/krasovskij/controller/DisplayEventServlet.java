@@ -1,7 +1,7 @@
 package ua.krasovskij.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import ua.krasovskij.model.Event;
-
 import ua.krasovskij.service.EventService;
 
 
@@ -24,13 +23,13 @@ public class DisplayEventServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
+		 List <Event> event = EventService.display();
 		response.setContentType(CONTENT_TYPE);
-		PrintWriter out = response.getWriter();
-		for(Event event : EventService.display()){
-				out.write(event.toString());
-		}
+		request.setAttribute("listEvent",event);
+		request.getRequestDispatcher("dashboard.jsp").forward(request, response);
 		
-
 	}
+	
+	
 
 }

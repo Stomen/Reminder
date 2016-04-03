@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,23 +13,20 @@
 			<div class="header">
 					<a href="home">Home</a>
 					<a href="add">Add</a> 
-					<a href="search">Dashboard</a>
+					<a href="display">Dashboard</a>
 					<hr>
 			</div>
 			<div class = "aside">
-				<h2 class="text">My right col</h2>
+					<h2 class="text">My right col</h2>
 			</div>
 		
 			<div class="content">
 					
 					<h2 class="text">Enter your event</h2>
-							<p><% Object message = request.getAttribute("message");%>
-							<% if(message==null)
-								{
-								message = "";
-								}%>
-							<%= message %>	</p>
 					
+					<p><font color = "green"><c:out value='${messageTrue}'/></font></p>
+					<p><font color = "red"><c:out value="${messageFalse}"></c:out></font></p>	
+																														
 					<form action="add" method="post">
 						<table class="table-style-add text">
 								<tr>
@@ -42,9 +40,9 @@
 								<tr>
 									<td>Type:</td>
 									<td><select name="type" size="1">
-										<option name="first">Первый</option>
-										<option name="second">Второй</option>
-										<option name="thirth">Третий</option>
+										<option value="first">first</option>
+										<option value="second">second</option>
+										<option value="thirth">thirth</option>
 			
 										</select></td>
 								</tr>

@@ -1,7 +1,7 @@
 package ua.krasovskij.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,17 +25,22 @@ public class RemoveEventServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.setContentType(CONTENT_TYPE);
-		PrintWriter out = response.getWriter();
+		
 		String id = request.getParameter(REMOVE_ID);
 		if(id!=null && !id.isEmpty()){
 			if(EventService.remove(Integer.parseInt(id))){
-				out.print(SUCCESS_REMOVE);
+				request.setAttribute("removeTrue", SUCCESS_REMOVE);
+				request.getRequestDispatcher("display").forward(request, response);
+				
 			}
-			else{
-				out.print(ERROR_REMOVE);
+			else{				
+				request.setAttribute("removeFalse", ERROR_REMOVE);
+				request.getRequestDispatcher("display").forward(request, response);
 			}
 		}
-		out.print(ERROR);
+		
+		request.setAttribute("removeFalse", ERROR);
+		request.getRequestDispatcher("display").forward(request, response);
 		
 	}
 

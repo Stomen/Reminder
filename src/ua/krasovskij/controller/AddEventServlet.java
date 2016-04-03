@@ -1,7 +1,7 @@
 package ua.krasovskij.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,7 +20,7 @@ public class AddEventServlet extends HttpServlet {
 	private static final String TIME = "time";
 	private static final String CONTENT_TYPE = "text/html";
 	private static final String ERROR_ADD = "Error, event not add";
-	private static final String SUCCESS_ADD = "SUCCESS! Event add";
+	private static final String SUCCESS_ADD = "SUCCESS! Product was added";
 	private static final String ERROR_NULL_EVENT = "System error. null event";
 	private static final String ERROR_ELLEGAL_ARGUMENT = "Error, empty parameters";
 	private static final String ERROR = "Error";
@@ -37,24 +37,24 @@ public class AddEventServlet extends HttpServlet {
 		response.setContentType(CONTENT_TYPE);
 		if (request.getParameter(TITLE).isEmpty() || request.getParameter(DATE).isEmpty()
 				|| request.getParameter(TIME).isEmpty()) {
-			request.setAttribute("message", PARAM_IS_EMPTY);
+			request.setAttribute("messageFalse", PARAM_IS_EMPTY);
 		}
 		try {
 			Event event = EventUtil.createEvent(request.getParameter(TITLE), request.getParameter(DATE),
 					request.getParameter(TIME));
 			if (event == null) {
-				request.setAttribute("message", ERROR_NULL_EVENT);
+				request.setAttribute("messageFalse", ERROR_NULL_EVENT);
 			} else {
 				if (EventService.add(event)) {
-					request.setAttribute("message", SUCCESS_ADD);
+					request.setAttribute("messageTrue", SUCCESS_ADD);
 				} else {
-					request.setAttribute("message", ERROR_ADD);
+					request.setAttribute("messageFalse", ERROR_ADD);
 				}
 			}
 		} catch (IllegalArgumentException e) {
-			request.setAttribute("message", ERROR_ELLEGAL_ARGUMENT + e.getMessage());
+			request.setAttribute("messageFalse", ERROR_ELLEGAL_ARGUMENT + e.getMessage());
 		} catch (Exception e) {
-			request.setAttribute("message", ERROR + e.getMessage());
+			request.setAttribute("messageFalse", ERROR + e.getMessage());
 		}
 		request.getRequestDispatcher("add.jsp").forward(request, response);
 	}

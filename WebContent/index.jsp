@@ -12,7 +12,7 @@
 			<div class="header">
 					<a href="home">Home</a>
 					<a href="add">Add</a> 
-					<a href="search">Dashboard</a>
+					<a href="display">Dashboard</a>
 					<hr>
 			</div>
 			<div class = "aside">
