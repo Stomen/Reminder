@@ -29,12 +29,12 @@ public class SearchEventServlet extends HttpServlet {
 		response.setContentType(CONTENT_TYPE);
 		List <Event> event = EventService.search(request.getParameter(PARAM));
 			if(request.getParameter(PARAM).isEmpty() || event==null){
-				request.setAttribute("dashboard.jsp", ERROR);
+				request.setAttribute("False", ERROR);
 				request.getRequestDispatcher("dashboard.jsp").forward(request, response);
 			}
 			else{
 				request.setAttribute("listEvent", event);
-				request.setAttribute("messageTrue", SUCCESS);
+				request.setAttribute("True", SUCCESS);
 				request.getRequestDispatcher("dashboard.jsp").forward(request, response);
 			}
 			

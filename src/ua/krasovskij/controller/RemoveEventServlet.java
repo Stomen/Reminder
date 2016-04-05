@@ -29,17 +29,17 @@ public class RemoveEventServlet extends HttpServlet {
 		String id = request.getParameter(REMOVE_ID);
 		if(id!=null && !id.isEmpty()){
 			if(EventService.remove(Integer.parseInt(id))){
-				request.setAttribute("removeTrue", SUCCESS_REMOVE);
+				request.setAttribute("True", SUCCESS_REMOVE);
 				request.getRequestDispatcher("display").forward(request, response);
 				
 			}
 			else{				
-				request.setAttribute("removeFalse", ERROR_REMOVE);
+				request.setAttribute("False", ERROR_REMOVE);
 				request.getRequestDispatcher("display").forward(request, response);
 			}
 		}
 		
-		request.setAttribute("removeFalse", ERROR);
+		request.setAttribute("False", ERROR);
 		request.getRequestDispatcher("display").forward(request, response);
 		
 	}

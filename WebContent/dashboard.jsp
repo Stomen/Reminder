@@ -1,6 +1,4 @@
-<%@page import="java.util.List"%>
-<%@page import="java.util.ArrayList"%>
-<%@page import="ua.krasovskij.model.Event"%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -32,8 +30,8 @@
 						<input type="submit" value="search" class="input"> <br>
 					</form>		
 								
-						<p><font color = "green"><c:out value='${removeTrue}'/></font></p>
-						<p><font color = "red"><c:out value="${removeFalse}"></c:out></font></p>	
+						<p><font color = "green"><c:out value='${True}'/></font></p>
+						<p><font color = "red"><c:out value="${False}"></c:out></font></p>	
 						
 					<table class="table-style text">
 				
