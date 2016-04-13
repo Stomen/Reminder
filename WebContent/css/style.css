@@ -1,5 +1,5 @@
 @CHARSET "UTF-8";
-body{
+.background{
 	 background-image: url("../img/background.jpg");
 }
 
@@ -42,14 +42,14 @@ body{
 	
 }
 
-A{
+.links{
 	font-size: 20px;
 	margin: 10px;
 	color: white;
 	text-decoration: none;
 } 
  
- A:hover {
+ .links:hover {
    color: #f29b67 ;
 } 
    
@@ -59,7 +59,7 @@ A{
 	width:600px;
 } 
 
-h2{
+.h2{
 	text-align: center;
 } 
 
@@ -79,7 +79,7 @@ h2{
 	text-align:  center;
 }	
    
-img{
+.photo{
 	
 	float: right;
 	width: 400px;

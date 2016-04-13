@@ -3,26 +3,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Reminder</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body class="background">
 
 		<div class="all">
 
 			<div class="header">
-					<a href="home">Home</a>
-					<a href="add">Add</a> 
-					<a href="display">Dashboard</a>
+					<a class="links" href="home">Home</a>
+					<a class="links" href="add">Add</a> 
+					<a class="links" href="display">Dashboard</a>
 					<hr>
 			</div>
 			<div class = "aside">
-					<h2 class="text">My right col</h2>
+					<h2 class="text h2">My right col</h2>
 			</div>
 		
 			<div class="content">
 					
-					<h2 class="text">Enter your event</h2>
+					<h2 class="text h2">Enter your event</h2>
 					
 					<p><font color = "green"><c:out value='${messageTrue}'/></font></p>
 					<p><font color = "red"><c:out value="${messageFalse}"></c:out></font></p>	

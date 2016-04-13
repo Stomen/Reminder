@@ -1,26 +1,28 @@
-
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="ua.krasovskij.model.Event"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Reminder</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body class="background">
 
 
 	<div class="all">
 
 			<div class="header">
-					<a href="home">Home</a>
-					<a href="add">Add</a> 
-					<a href="display">Dashboard</a>
+					<a class="links" href="home">Home</a>
+					<a class="links" href="add">Add</a> 
+					<a class="links" href="display">Dashboard</a>
 					<hr>
 			</div>
 			
 			<div class = "aside">
-					<h2 class="text">My right col</h2>
+					<h2 class="text h2">My right col</h2>
 			</div>
 		
 			<div class="content">
@@ -30,8 +32,8 @@
 						<input type="submit" value="search" class="input"> <br>
 					</form>		
 								
-						<p><font color = "green"><c:out value='${True}'/></font></p>
-						<p><font color = "red"><c:out value="${False}"></c:out></font></p>	
+						<p><font color = "green"><c:out value='${removeTrue}'/></font></p>
+						<p><font color = "red"><c:out value="${removeFalse}"></c:out></font></p>	
 						
 					<table class="table-style text">
 				
@@ -51,10 +53,10 @@
 							<td>Description	</td>
 							<td>${event.date} : ${event.time} </td>
 							<td>
-							<form action="remove" method="get">
-							<input type="hidden" name="id" value="${event.id}" >
-							<input type="submit" value="delete">
-							</form>
+								<form action="remove" method="get">
+									<input type="hidden" name="id" value="${event.id}" >
+									<input type="submit" value="delete">
+								</form>
 							</td>
 						</tr>
 							<c:set var="count" value="${count + 1}"></c:set>
